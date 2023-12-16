@@ -38,6 +38,37 @@
 </head>
 <body>
 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://mosamdabhi.github.io">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://mv-nrsfm.github.io">
+            MV-NRSfM
+          </a>
+          <a class="navbar-item" href="https://multiview-bootstrapping-in-wild.github.io">
+            MBW
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <section class="hero">
   <div class="hero-body">
@@ -45,10 +76,39 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">3D-LFM: Lifting Foundation Model</h1>
-          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mosamdabhi.github.io/">Mosam Dabhi</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.laszlojeni.com/">László A. Jeni</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.adelaide.edu.au/directory/simon.lucey">Simon Lucey</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>            
+            <span class="author-block"><sup>2</sup>The University of Adelaide</span>
+          </div>
+
+          <!-- <div class="title is-4 has-text-danger">
+            <br/>
+            <span class="author-block">Conference on Neural Information Processing Systems (NeurIPS), 2022</span>
+          </div>                     -->
+
           <div class="column has-text-centered">
             <div class="publication-links">
-
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://openreview.net/forum?id=i1bFPSw42W0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
               <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -59,7 +119,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -68,12 +128,11 @@
                   <span>Video </span>
                 </a>
               </span>
-              <!-- <br>            -->
-              
+               -->
               
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/mosamdabhi/3dlfm"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -81,7 +140,29 @@
                   <span>Demo</span>
                   </a>
               </span>
+
+              <!-- Huggingface Demo Link -->
+              <span class="link-block">
+                <a href="https://huggingface.co/your-demo-link" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+
  
+
+              <!-- Tweet link. -->              
+              <!-- <span class="link-block">
+                <a href="https://twitter.com/mosamdabhi/status/1596667356180189186?s=20&t=4ahKIIXa6gbG23YKk86rnw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Tweet</span>    
+                  </a>
+              </span>                             -->
 
                   </a>
             </div>
@@ -92,31 +173,128 @@
     </div>
   </div>
 </section>
-  
 
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
   <div class="container is-max-desktop">
     <div class="hero-body">
-
       <h2 class="subtitle has-text-centered">
-        Under construction. Coming soon...
+        <!-- <span class="mbw"><i>3D-LFM</i></span> is a universal 2D-3D lifting model capable of handling multiple object categories using a single model. It doesn't assume object knowledge and exploits the permutation equivariance of transformers to learn a category-agnostic lifting model. Moreover, it is an efficient model because it exploits geometric reasoning to learn a lifting model that is invariant to the rigid camera rotations by lifting shapes in a canonical frame.  -->
+        <span class="mbw"><i>3D-LFM</i></span> is a universal 2D-3D lifting model capable of handling various object types with a single, category-agnostic approach. Leveraging transformers' permutation equivariance, it avoids the need for specific object knowledge and maintains efficiency by utilizing geometric principles to remain consistent across camera rotations, anchoring shapes in a standardized (canon) frame.
       </h2>
     </div>
   </div>
   </div>
 </section>
 
+  
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered"> <!-- Bulma class to center text -->
+      <h4 class="title">Unified 3D-LFM Model</h4>
+      <p class="subtitle">A single model for 30+ object categories.</p>
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="graphics/1.png" alt="Object Category 1">
+        </div>
+        <div class="item">
+          <img src="graphics/2.png" alt="Object Category 2">
+        </div>
+        <div class="item">
+          <img src="graphics/3.png" alt="Object Category 3">
+        </div>
+        <div class="item">
+          <img src="graphics/4.png" alt="Object Category 4">
+        </div>
+        <div class="item">
+          <img src="graphics/5.png" alt="Object Category 5">
+        </div>        
+      </div>
+      <!-- <p class="is-size-6 has-text-centered mt-3">A unified model scaling to 30+ diverse categories. Proposed architectural design allows for operating upon varying landmark configurations, which manages identifying landmark correspondence issue through permutation equivariance. For details, see our paper. Red signifies groundtruth and blue signifies prediction.</p>       -->
+      <p class="is-size-6 has-text-centered mt-3">The 3D-LFM is capable of scaling to over 30 categories, managing diverse landmark configurations through proposed architectural changes. See our paper for more details. Key: Red for ground truth, blue for predictions.</p>      
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <h2 class="title">Out of Distribution 3D Lifting</h2> -->
+        <hr> <!-- Horizontal line -->
+        <h4 class="title">OOD Generalization</h4>
+        <!-- <p class="subtitle">All input samples shown below are never seen by the model in training.</p>                 -->
+        <p class="subtitle">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase.</p>
+        <video id="teaser" autoplay muted loop playsinline width="100%" height="auto">        
+          <source src="graphics/ood-main.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser"> -->
+  <!-- <div class="columns is-centered has-text-centered"> -->
+  <!-- <div class="container is-max-desktop"> -->
+    <!-- <div class="hero-body"> -->
+      <!-- <iframe width="924" height="519.6" src="https://www.youtube.com/embed/vt8mk2_Z_tE?autoplay=1&mute=1&loop=1&playlist=vt8mk2_Z_tE&modestbranding&controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>       -->
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">         -->
+        <!-- <source src="graphics/ood-main.mp4" -->
+                <!-- type="video/mp4"> -->
+      <!-- </video> -->
+      <!-- <h2 class="subtitle has-text-centered">
+        Under construction. Coming soon...
+      </h2> -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
+
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h4 class="title">Unified 3D-LFM Model</h4>
+      <p class="subtitle">A single model for 30+ object categories, scaling with architectural innovation.</p>
+      <div id="object-carousel" class="carousel">
+        <div class="item">
+          <img src="graphics/human-animals.png" alt="Object Category 1">
+        </div>
+        <div class="item">
+          <img src="graphics/inamimates.png" alt="Object Category 2">
+        </div>
+      </div>
+      <p class="is-size-6 has-text-centered mt-3">Explore the versatility of 3D-LFM: A unified model scaling to 30+ diverse categories. Innovative design allows for flexible landmark placement, with internal architecture adeptly managing correspondence through permutation equivariance. For details, see our paper.</p>
+    </div>
+  </div>
+</section> -->
+
 
 
 
 <footer class="footer">
   <div class="container">
-
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2210.01721.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/mosamdabhi" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
+          <!-- <p>
+            This website template is borrowed from <a href="https://nerfies.github.io"> Nerfies </a> webpage.
+          </p> -->
         </div>
       </div>
     </div>

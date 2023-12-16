@@ -1,0 +1,17 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+  }
+  
+  .carousel .item {
+    display: none; /* Hide all items by default */
+    width: 100%; /* Each item takes full width of the carousel */
+    transition: opacity 1s ease; /* Smooth transition for the fade effect */
+  }
+  
+  .carousel .item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
