@@ -190,7 +190,8 @@
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
         <!-- <span class="mbw"><i>3D-LFM</i></span> is a universal 2D-3D lifting model capable of handling multiple object categories using a single model. It doesn't assume object knowledge and exploits the permutation equivariance of transformers to learn a category-agnostic lifting model. Moreover, it is an efficient model because it exploits geometric reasoning to learn a lifting model that is invariant to the rigid camera rotations by lifting shapes in a canonical frame.  -->
-        <span class="mbw"><i>3D-LFM</i></span> is a universal 2D-3D lifting model capable of handling various object types with a category-agnostic approach. Leveraging transformers' permutation equivariance, it avoids the need for specific object knowledge and maintains efficiency by utilizing geometric principles to remain consistent across camera rotations, anchoring shapes in a standardized (canon) frame.
+        <!-- <span class="mbw"><i>3D-LFM</i></span> is a universal 2D-3D lifting model capable of handling various object types with a category-agnostic approach. Leveraging transformers' permutation equivariance, it avoids the need for specific object knowledge and maintains efficiency by utilizing geometric principles to remain consistent across camera rotations, anchoring shapes in a standardized (canon) frame. -->
+        <span class="3dlfm"><i>3D-LFM</i></span>, a universal 2D-3D lifting model, processes diverse objects without category-specific knowledge. It uses transformers' permutation equivariance and geometric consistency to handle camera rotations, standardizing shape representation in a canonical frame.
       </h2>
     </div>
   </div>
@@ -198,7 +199,7 @@
 </section>
 
   
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div class="container has-text-centered"> <!-- Bulma class to center text -->
@@ -223,21 +224,19 @@
         </div>        
       </div>
       <!-- <p class="is-size-6 has-text-centered mt-3">A unified model scaling to 30+ diverse categories. Proposed architectural design allows for operating upon varying landmark configurations, which manages identifying landmark correspondence issue through permutation equivariance. For details, see our paper. Red signifies groundtruth and blue signifies prediction.</p>       -->
-      <p class="is-size-6 has-text-centered mt-3">The 3D-LFM is capable of scaling to over 30 categories, managing diverse landmark configurations through proposed architectural changes. See our paper for more details. Key: Red for ground truth, blue for predictions.</p>      
+      <p class="is-size-6 has-text-centered mt-3">The 3D-LFM scales to multiple categories (30+ in our experiments), managing diverse landmark configurations through proposed architectural changes. See our paper for more details. Key: Red for ground truth, blue for predictions.</p>      
 
     </div>
   </div>
 </section>
 
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <!-- <h2 class="title">Out of Distribution 3D Lifting</h2> -->
-        <hr> <!-- Horizontal line -->
+        <hr>
         <h4 class="title">OOD Generalization</h4>
-        <!-- <p class="subtitle">All input samples shown below are never seen by the model in training.</p>                 -->
         <p class="subtitle">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase.</p>
         <video id="teaser" autoplay muted loop playsinline width="100%" height="auto">        
           <source src="graphics/ood-main.mp4" type="video/mp4">
@@ -246,51 +245,108 @@
       </div>
     </div>
   </div>
-</section>
-
-<!-- <section class="hero teaser"> -->
-  <!-- <div class="columns is-centered has-text-centered"> -->
-  <!-- <div class="container is-max-desktop"> -->
-    <!-- <div class="hero-body"> -->
-      <!-- <iframe width="924" height="519.6" src="https://www.youtube.com/embed/vt8mk2_Z_tE?autoplay=1&mute=1&loop=1&playlist=vt8mk2_Z_tE&modestbranding&controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>       -->
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">         -->
-        <!-- <source src="graphics/ood-main.mp4" -->
-                <!-- type="video/mp4"> -->
-      <!-- </video> -->
-      <!-- <h2 class="subtitle has-text-centered">
-        Under construction. Coming soon...
-      </h2> -->
-    <!-- </div> -->
-  <!-- </div> -->
-  <!-- </div> -->
-<!-- </section> -->
-
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h4 class="title">Unified 3D-LFM Model</h4>
-      <p class="subtitle">A single model for 30+ object categories, scaling with architectural innovation.</p>
-      <div id="object-carousel" class="carousel">
-        <div class="item">
-          <img src="graphics/human-animals.png" alt="Object Category 1">
-        </div>
-        <div class="item">
-          <img src="graphics/inamimates.png" alt="Object Category 2">
-        </div>
-      </div>
-      <p class="is-size-6 has-text-centered mt-3">Explore the versatility of 3D-LFM: A unified model scaling to 30+ diverse categories. Innovative design allows for flexible landmark placement, with internal architecture adeptly managing correspondence through permutation equivariance. For details, see our paper.</p>
-    </div>
-  </div>
 </section> -->
 
+&nbsp;
+&nbsp;
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered"> <!-- Bulma class to center text -->
+      <!-- <hr> -->
+      <h4 class="title">OOD Generalization</h4>
+      <!-- <p class="subtitle">All input samples shown below are never seen by the model in training.</p>                 -->
+      <!-- <p class="subtitle">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase. Following object categories are never seen by the model in training.</p> -->
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="chimpanzee" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="cheetah" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>    
+        <div class="item">
+          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>            
+        <div class="item">
+          <video poster="" id="chimpanzee" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="cheetah" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>        
+        <div class="item">
+          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>        
+        <div class="item">
+          <video poster="" id="chimpanzee" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="cheetah" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ood/9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <p class="is-size-6 has-text-centered mt-3">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase. Above object categories are never seen by the model in training.</p>      
+
+    </div>
+  </div>
+</section>
 
 
 
-<footer class="footer">
+<!-- Abstract Section -->
+<section class="section">
   <div class="container">
-    <!-- <div class="content has-text-centered">
+    <div class="container has-text-centered"> <!-- Bulma class to center text -->
+    <h2 class="title">Abstract</h2>
+    <p class="content" style="text-align: justify;">      
+      The lifting of 3D structure and camera from 2D landmarks is at the cornerstone of the entire discipline of computer vision. Traditional methods have been confined to specific rigid objects, such as those in Perspective-n-Point (PnP) problems, but deep learning has expanded our capability to reconstruct a wide range of object classes (e.g. C3PDO and PAUL) with resilience to noise, occlusions, and perspective distortions. All these techniques, however, have been limited by the fundamental need to establish correspondences across the 3D training data – significantly limiting their utility to applications where one has an abundance of "in-correspondence" 3D data. Our approach harnesses the inherent permutation equivariance of transformers to manage varying number of points per 3D data instance, withstands occlusions, and generalizes to unseen categories. We demonstrate state of the art performance across 2D-3D lifting task benchmarks. Since our approach can be trained across such a broad class of structures we refer to it simply as a <b>3D</b> <b>L</b>ifting <b>F</b>oundation <b>M</b>odel (<b>3D-LFM</b>) -– the first of its kind.
+    </p>
+    <!-- <figure class="image is-128x128">
+      <img src="graphics/approach.png" alt="Architectural Overview">
+      <figcaption class="is-size-7">Figure 1: Architectural diagram of the 3D-LFM model.</figcaption>
+    </figure> -->
+    <div class="item">
+      <img src="graphics/approach.png" alt="Architectural Overview" width="600">
+      <!-- <figcaption class="is-size-7">Figure 1: Architectural diagram of the 3D-LFM model.</figcaption> -->
+      <figcaption class="is-size-7"><b>Architectural diagram of the 3D-LFM model</b>: The system encodes 2D keypoints via TPE, processes them through Transformer layers, and decodes to a canonical 3D shape using an MLP. The shape is aligned to ground truth using Procrustean methods, ensuring local and global context capture with computational efficiency.</figcaption>
+      
+    </div>
+  </div>
+</section>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
       <a class="icon-link"
          href="https://arxiv.org/pdf/2210.01721.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -298,17 +354,17 @@
       <a class="icon-link" href="https://github.com/mosamdabhi" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div> -->
+    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <!-- <p>
+          <p>
             This website template is borrowed from <a href="https://nerfies.github.io"> Nerfies </a> webpage.
-          </p> -->
+          </p>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 </body>
 </html>
