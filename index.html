@@ -221,6 +221,44 @@
   </div>
 </section>
 
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered"> <!-- Bulma class to center text -->
+      <h4 class="title">Teaser</h4>
+      <p class="subtitle">3D pose estimation on random videos from internet</p>
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="graphics/tokyo-hybrid-hulk.gif" alt="Object Category 1">
+        </div>        
+        <div class="item">
+          <img src="graphics/insects-full.gif" alt="Object Category 5">
+        </div>
+        <div class="item">
+          <img src="graphics/ghunghroo-hybrid-hulk.gif" alt="Object Category 2">
+        </div>        
+        <div class="item">
+          <img src="graphics/dogs-animal-hulk-2cams.gif" alt="Object Category 3">
+        </div>   
+        <div class="item">
+          <img src="graphics/warmup-full.gif" alt="Object Category 4">
+        </div>                                        
+        <div class="item">
+          <img src="graphics/deer-animal-hulk-2cams.gif" alt="Object Category 4">
+        </div>   
+        <div class="item">
+          <img src="graphics/toutuch-full.gif" alt="Object Category 4">
+        </div>
+      </div>
+      <!-- <p class="is-size-6 has-text-centered mt-3">A unified model scaling to 30+ diverse categories. Proposed architectural design allows for operating upon varying landmark configurations, which manages identifying landmark correspondence issue through permutation equivariance. For details, see our paper. Red signifies groundtruth and blue signifies prediction.</p>       -->
+      <p class="is-size-6 has-text-centered mt-3">We show 3D pose estimation on various deformable categories from the internet, including OpenAI's SORA videos. No camera information is required, allowing 3D-LFM to work out of the box on many of these categories, provided 2D landmarks are available (in any order or joint connectivity).</p>      
+
+    </div>
+  </div>
+</section>
+
   
 <section class="hero is-small">
   <div class="hero-body">
@@ -283,7 +321,13 @@
       <!-- <p class="subtitle">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase. Following object categories are never seen by the model in training.</p> -->
 
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
+        <div class="item">      
+        <video poster="" id="fish" autoplay controls muted loop playsinline height="100%">
+          <source src="graphics/ood/fish_ood.mp4"
+                  type="video/mp4">
+        </video>    
+        </div>
+        <div class="item">      
           <video poster="" id="chimpanzee" autoplay controls muted loop playsinline height="100%">
             <source src="graphics/ood/1.mp4"
                     type="video/mp4">
@@ -338,7 +382,7 @@
           </video>
         </div>
       </div>
-      <p class="is-size-6 has-text-centered mt-3">The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase. Above object categories are never seen by the model in training.</p>      
+      <p class="is-size-6 has-text-centered mt-3">Fish is completely OOD! The 3D-LFM is capable in recognizing and reconstructing objects in configurations and with a number of landmarks never encountered during its training phase. Above object categories are never seen by the model in training.</p>      
 
     </div>
   </div>
