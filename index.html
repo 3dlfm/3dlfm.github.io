@@ -230,27 +230,82 @@
       <p class="subtitle">3D pose estimation on random videos from internet</p>
 
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
+        <!-- <div class="item">
           <img src="graphics/tokyo-hybrid-hulk.gif" alt="Object Category 1">
-        </div>        
+        </div>         -->
         <div class="item">
+          <video poster="" id="tokyo" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/tokyo_original_rate.mp4"
+                    type="video/mp4">
+          </video>
+        </div>            
+        <!-- <div class="item">
           <img src="graphics/insects-full.gif" alt="Object Category 5">
-        </div>
+        </div> -->
         <div class="item">
-          <img src="graphics/ghunghroo-hybrid-hulk.gif" alt="Object Category 2">
+          <video poster="" id="bug" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/bug.mp4"
+                    type="video/mp4">
+          </video>
         </div>        
+        <!-- <div class="item">
+          <img src="graphics/ghunghroo-hybrid-hulk.gif" alt="Object Category 2">
+        </div>        -->
         <div class="item">
+          <video poster="" id="ghunghroo" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/ghunghroo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>        
+
+        <!-- <div class="item">
           <img src="graphics/dogs-animal-hulk-2cams.gif" alt="Object Category 3">
-        </div>   
+        </div>    -->
         <div class="item">
+          <video poster="" id="dogs-sora" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/dog_sora.mp4"
+                    type="video/mp4">
+          </video>
+        </div>         
+        <!-- <div class="item">
           <img src="graphics/warmup-full.gif" alt="Object Category 4">
-        </div>                                        
+        </div>                                         -->
         <div class="item">
+          <video poster="" id="warmup" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/warmup_square.mp4"
+                    type="video/mp4">
+          </video>
+        </div>            
+        <!-- <div class="item">
           <img src="graphics/deer-animal-hulk-2cams.gif" alt="Object Category 4">
-        </div>   
+        </div>    -->
         <div class="item">
+          <video poster="" id="deer" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/deer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>                  
+        <!-- <div class="item">
           <img src="graphics/toutuch-full.gif" alt="Object Category 4">
-        </div>
+        </div> --> 
+        <div class="item">
+          <video poster="" id="nolie" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/nolie.mp4"
+                    type="video/mp4">
+          </video>
+        </div>                  
+        <div class="item">
+          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/tiger.mp4"
+                    type="video/mp4">
+          </video>
+        </div>                                  
+        <div class="item">
+          <video poster="" id="toetouch" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/toetouch.mp4"
+                    type="video/mp4">
+          </video>
+        </div>           
       </div>
       <!-- <p class="is-size-6 has-text-centered mt-3">A unified model scaling to 30+ diverse categories. Proposed architectural design allows for operating upon varying landmark configurations, which manages identifying landmark correspondence issue through permutation equivariance. For details, see our paper. Red signifies groundtruth and blue signifies prediction.</p>       -->
       <p class="is-size-6 has-text-centered mt-3">We show 3D pose estimation on various deformable categories from the internet, including OpenAI's SORA videos. No camera information is required, allowing 3D-LFM to work out of the box on many of these categories, provided 2D landmarks are available (in any order or joint connectivity).</p>      
