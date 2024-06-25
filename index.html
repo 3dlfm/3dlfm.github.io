@@ -227,7 +227,7 @@
     <div class="container">
       <div class="container has-text-centered"> <!-- Bulma class to center text -->
       <h4 class="title">Teaser</h4>
-      <p class="subtitle">3D pose estimation on random videos from internet</p>
+      <p class="subtitle">3D pose estimation on random videos from the internet using a single model for all the following categories.</p>
 
       <div id="results-carousel" class="carousel results-carousel">
         <!-- <div class="item">
@@ -280,8 +280,8 @@
           <img src="graphics/deer-animal-hulk-2cams.gif" alt="Object Category 4">
         </div>    -->
         <div class="item">
-          <video poster="" id="deer" autoplay controls muted loop playsinline height="100%">
-            <source src="graphics/deer.mp4"
+          <video poster="" id="fish" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/fish.mp4"
                     type="video/mp4">
           </video>
         </div>                  
@@ -295,8 +295,8 @@
           </video>
         </div>                  
         <div class="item">
-          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
-            <source src="graphics/tiger.mp4"
+          <video poster="" id="deer" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/deer.mp4"
                     type="video/mp4">
           </video>
         </div>                                  
@@ -305,7 +305,19 @@
             <source src="graphics/toetouch.mp4"
                     type="video/mp4">
           </video>
-        </div>           
+        </div>       
+        <div class="item">
+          <video poster="" id="tiger" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/tiger.mp4"
+                    type="video/mp4">
+          </video>
+        </div>                   
+        <div class="item">
+          <video poster="" id="mosam" autoplay controls muted loop playsinline height="100%">
+            <source src="graphics/mosam.mp4"
+                    type="video/mp4">
+          </video>
+        </div>        
       </div>
       <!-- <p class="is-size-6 has-text-centered mt-3">A unified model scaling to 30+ diverse categories. Proposed architectural design allows for operating upon varying landmark configurations, which manages identifying landmark correspondence issue through permutation equivariance. For details, see our paper. Red signifies groundtruth and blue signifies prediction.</p>       -->
       <p class="is-size-6 has-text-centered mt-3">We show 3D pose estimation on various deformable categories from the internet, including OpenAI's SORA videos. No camera information is required, allowing 3D-LFM to work out of the box on many of these categories, provided 2D landmarks are available (in any order or joint connectivity).</p>      
